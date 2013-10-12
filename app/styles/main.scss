@@ -88,6 +88,39 @@ body {
     height: 100%;
     -webkit-font-smoothing: antialiased;
 }
+.carousel-inner > .item{
+    height: 170px;
+}
+.carousel.fade
+{
+    opacity: 1;
+    .item
+    {
+        
+        left: 0 !important;
+        opacity: 0;
+        top:0;
+        position:absolute;
+        width: 100%;
+        display:block !important;
+        z-index:1;
+        &:first-child{
+            top:auto;
+            position:relative;
+        }
+        &.active
+        {
+            opacity: 1;
+            -webkit-animation: Pulse .7s  ease-in-out;
+            -o-animation: Pulse .7s  ease-in-out;
+            animation: Pulse .7s  ease-in-out;
+            z-index:2;
+        }
+    }
+}
+.carousel-caption{
+    padding-bottom:0;
+}
 .navbar-default{
    background: $mainColor;
    border:0;
@@ -140,7 +173,6 @@ h1 {
     font-weight: 100;
 }
 h2 {
-    color: #6D461D;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -192,6 +224,7 @@ h1.heading{
     }
     h2 {
         color:#fff;
+        margin-top: -20px;
     }
     h1.weagleBrand{
         font-weight: 100;
@@ -222,7 +255,7 @@ h1.heading{
     .page_container {
         margin-top: 0px;
     }
-   
+
     .row{
         text-align: left;
         margin-bottom: 20px;
@@ -289,12 +322,11 @@ h1.heading{
 }
 .main section.page3 {
 
-    h1 {
-    }
     h2 {
         line-height: 58px;
         font-weight: 100;
         font-size: 21px;
+        color:#000;
     }
     .weagleBrand{
         font-size: 55px;
@@ -345,6 +377,32 @@ label{
         }
     }
 }
+
+
+@keyframes Pulse {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.1);
+    -ms-transform: scale(.1);
+    -o-transform: scale(.1);
+    transform: scale(.1);
+  }
+
+  75% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 @media screen and (min-width: 768px) {
 
 }

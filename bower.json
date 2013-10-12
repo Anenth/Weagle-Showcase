@@ -1,0 +1,11 @@
+{
+  "name": "weagle-showcase",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "jquery": "~1.10.2",
+    "onepage-scroll": "*",
+    "font-awesome": "~3.2.1"
+  },
+  "devDependencies": {}
+}

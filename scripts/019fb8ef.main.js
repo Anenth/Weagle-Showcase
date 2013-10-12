@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$(".main").onepage_scroll({sectionContainer:"section"}),$(".nav>li>a").on("click",function(a){a.preventDefault();var b=$(this);$(".nav>li>a").removeClass("active"),b.addClass("active"),$(".onepage-pagination>li>a[data-index="+b.data("index")+"]").trigger("click")})});

@@ -1,9 +1,10 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-$FontAwesomePath: "/bower_components/font-awesome/font/";
+$FontAwesomePath: "../bower_components/font-awesome/font/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
 @import 'font-awesome/scss/font-awesome';
+
+$mainColor : #5AC0AE;
 
 body, html {
   margin: 0;
@@ -88,7 +89,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 .navbar-default{
-   background: #5AC0AE;
+   background: $mainColor;
    border:0;
    -webkit-transition: all 500ms ease-in-out;
    -moz-transition: all 500ms ease-in-out;
@@ -130,7 +131,7 @@ a {
 h1, h2 {
     font-family: 'open sans';
     font-weight: 100;
-    color: #5AC0AE;
+    color: $mainColor;
 }
 h1 {
     margin-bottom: 5px;
@@ -144,7 +145,7 @@ h2 {
     margin-bottom: 10px;
 }
 h1.heading{
-    border-bottom: 1px solid #5AC0AE;
+    border-bottom: 1px solid $mainColor;
     padding-bottom: 26px;
     margin-bottom: 55px;
     font-size: 50px;
@@ -291,10 +292,57 @@ h1.heading{
     h1 {
     }
     h2 {
-        color: rgba(0,0,0,0.85);
-        line-height: 160%;
+        line-height: 58px;
         font-weight: 100;
         font-size: 21px;
+    }
+    .weagleBrand{
+        font-size: 55px;
+    }
+
+}
+
+#note .notification_error {
+    color:#f00;
+}
+label{
+    display: block;
+    font-weight: normal;
+    text-align: left;
+}
+.form-control{
+    border-radius:0;
+    padding:20px;
+    &:hover,&:focus{
+        border-color: $mainColor;
+    }
+}
+.socialIcons{
+    margin-top: 60px;
+    a{
+        color:$mainColor;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size:20px;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+        &:nth-child(1):hover{
+            color:#3B5A9B;
+        }
+        &:nth-child(2):hover,&:nth-child(5):hover{
+            color:#F00;
+        }
+        &:nth-child(3):hover{
+            color:#0073B2;
+        }
+        &:nth-child(4):hover{
+            color:#49C8F5;
+        }
+        &:nth-child(6):hover{
+            color:#000;
+        }
     }
 }
 @media screen and (min-width: 768px) {

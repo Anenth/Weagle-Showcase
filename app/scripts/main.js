@@ -10,7 +10,10 @@ $(document).ready(function(){
 		selected.addClass('active');
 		$('.onepage-pagination>li>a[data-index='+ selected.data('index') +']').trigger('click');
 	});
-
+	$('.toPage').on('click',function(e){
+		e.preventDefault();
+		$('.onepage-pagination>li>a[data-index='+ $(this).data('index') +']').trigger('click');
+	});
 	$('#ajax-contact-form').submit(function(e) {
 		e.preventDefault();
 

@@ -61,7 +61,7 @@ body, .onepage-wrapper, html {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(0,0,0,0.85);
+  background: #bbb;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -71,7 +71,7 @@ body, .onepage-wrapper, html {
   width: 10px;
   height: 10px;
   background: none;
-  border: 1px solid black;
+  border: 1px solid $mainColor;
   margin-top: -4px;
   left: 8px;
 }
@@ -96,7 +96,6 @@ body {
     opacity: 1;
     .item
     {
-        
         left: 0 !important;
         opacity: 0;
         top:0;

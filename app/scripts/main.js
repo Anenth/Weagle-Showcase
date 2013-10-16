@@ -6,8 +6,6 @@ $(document).ready(function(){
 	$('.nav>li>a').on('click',function(e){
 		e.preventDefault();
 		var selected = $(this);
-		$('.nav>li>a').removeClass('active');
-		selected.addClass('active');
 		$('.onepage-pagination>li>a[data-index='+ selected.data('index') +']').trigger('click');
 	});
 	$('.toPage').on('click',function(e){
@@ -16,9 +14,10 @@ $(document).ready(function(){
 	});
 	$('#ajax-contact-form').submit(function(e) {
 		e.preventDefault();
-
+		$('#note').html('<div> Please wait </div>');
+		$('#ajax-contact-form').css('opacity',.4);
 		Parse.initialize('6qhUFEXtzdSTLwzG9VMeCU5oFaTWtgelh61unUiw', 'cTi3fECgna7cBjeYdyNIA6qnjehp1O8Ldrs8c5pe');
-		var Message = Parse.Object.extend('Messages_From_Showcase');
+		var Message = Parse.Object.extend('WeagleContact');
 		var message = new Message();
 		message.save({
 			name: $('#inputName').val(),

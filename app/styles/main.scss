@@ -405,3 +405,14 @@ label{
 @media screen and (min-width: 768px) {
 
 }
+.copyright{
+  background: #000;
+  padding: 10px 0 3px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  p{
+    color:#fff;
+  }
+}
